@@ -13,7 +13,6 @@ data:
         visits-service: /visit/**
         customers-service: /customer/**
         api-gateway: /gateway/**
-    spring.cloud.discovery.client.simple.instances.customers-service[0].uri: http://customers-service:80
     spring.cloud.loadbalancer.enabled: false
     server:
       port: 8080
