@@ -9,7 +9,9 @@ data:
       prefix: /api
       ignoredServices: '*'
       routes:
-        vets-service: /vet/**
+        vets-service: 
+          uri: http://vets-service.petclinic.mesh
+          path: /vet/**
         visits-service: /visit/**
         customers-service: /customer/**
         api-gateway: /gateway/**
@@ -56,6 +58,7 @@ data:
     management.security.enabled: false
     # Enable all Actuators and not only the two available by default /health and /info starting Spring Boot 2.0
     management.endpoints.web.exposure.include: "*"
+    management.endpoint.gateway.enabled: true
 
     # Temporary hack required by the Spring Boot 2 / Spring Cloud Finchley branch
     # Waiting issue https://github.com/spring-projects/spring-boot/issues/13042
