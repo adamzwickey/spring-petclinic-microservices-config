@@ -36,14 +36,14 @@ data:
           enabled: false
           ribbon:
             enabled: false
-        gateway:
-          routes:
-            - id: vets-service
-              uri: http://vets-service.petclinic.mesh
-              predicates:
-                - Path=/api/vet/**
-              filters:
-                - StripPrefix=2
+        # gateway:
+        #   routes:
+        #     - id: vets-service
+        #       uri: http://vets-service.petclinic.mesh
+        #       predicates:
+        #         - Path=/api/vet/**
+        #       filters:
+        #         - StripPrefix=2
 
       jpa:
         open-in-view: false
