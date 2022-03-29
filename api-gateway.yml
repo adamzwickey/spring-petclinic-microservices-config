@@ -44,18 +44,6 @@ data:
                 - Path=/api/vet/**
               filters:
                 - StripPrefix=2
-            - id: visits-service
-              uri: http://visits-service
-              predicates:
-                - Path=/api/visit/**
-              filters:
-                - StripPrefix=2
-            - id: customers-service
-              uri: http://customers-service
-              predicates:
-                - Path=/api/customer/**
-              filters:
-                - StripPrefix=2
 
       jpa:
         open-in-view: false
